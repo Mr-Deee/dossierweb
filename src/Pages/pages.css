@@ -56,6 +56,82 @@
   }
   
   .nav-link:hover {
-    background-color: #555;
+    background-color: #111111;
   }
-  
+/* PortraitSlider.css */
+
+.portrait-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative; /* Make the parent of cards relative for z-index */
+}
+
+.card {
+  width: 160px; /* Set width of each card */
+  height: auto; /* Let height adjust based on content */
+  margin: 0 10px; /* Add margin between cards */
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  position: relative; /* Ensure proper stacking order */
+}
+
+.card img {
+  width: 100%; /* Ensure the image fills the card */
+  height: auto;
+  border-top-left-radius: 10px; /* Add rounded corners to top left and top right */
+  border-top-right-radius: 10px;
+}
+
+.card-content {
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  color: #333; /* Change color of heading */
+}
+
+.card-content p {
+  margin-bottom: 0;
+  color: #555; /* Change color of paragraph */
+}
+
+.popup {
+  position: fixed; /* Position fixed to remain above the blurred background */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  width: 400px; /* Set width of popup */
+  max-width: 90%; /* Limit maximum width */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  z-index: 100; /* Ensure popup appears above the blurred background */
+}
+
+.close-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Blur effect for background when popup is shown */
+.portrait-slider.blur:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Apply blur to the background */
+  z-index: 99; /* Ensure the blurred background stays below the popup */
+}
+
