@@ -1,0 +1,61 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .title {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  .section {
+    padding: 50px;
+    background-color: #f2f2f2;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+
+  .section.visible {
+    opacity: 1;
+  }
+  .section h2 {
+    margin-top: 0;
+  }
+  
+  .section p {
+    margin-bottom: 0;
+  }  
+  /* App.css */
+
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-link:hover {
+    background-color: #555;
+  }
+  
