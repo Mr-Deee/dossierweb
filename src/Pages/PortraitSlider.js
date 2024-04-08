@@ -6,9 +6,11 @@ import './pages.css';
 
 const PortraitSlider = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
 
-  const togglePopup = () => {
+  const togglePopup = (index) => {
     setShowPopup(!showPopup);
+    setSelectedCardIndex(index);
   };
 
   const settings = {
@@ -18,42 +20,32 @@ const PortraitSlider = () => {
     slidesToScroll: 1,
     arrows: true, // Show navigation arrows
     swipeToSlide: true, // Allow swiping to slide
-    variableWidth: true // Allow variable width for slides
+    variableWidth: true, // Allow variable width for slides
   };
 
   return (
     <div className="portrait-slider">
-    <Slider {...settings}>
-      <div className="card" onClick={togglePopup}>
-        <img src="image1.jpg" alt="Card 1" />
-        <div className="card-content">
-          <h3>Card 1</h3>
-          <p>Description for Card 1</p>
-        </div>
-        {showPopup && (
-          <div className="popup">
-            <p>This is the popup content.</p>
-            <button className="close-button" onClick={togglePopup}>Close</button>
+      <Slider {...settings}>
+        {[1, 2, 3, 4, 5].map((card, index) => (
+          <div key={index} className="card" onClick={() => togglePopup(index)}>
+            <img src={`image${index + 1}.jpg`} alt={`Card ${index + 1}`} />
+            <div className="card-content">
+              <h3>Card {index + 1}</h3>
+              <p>Description for Card {index + 1}</p>
+            </div>
+            {showPopup && selectedCardIndex === index && (
+              <div className="popup-overlay">
+                <div className="popup">
+                  <p>This is the popup {index + 1} content.</p>
+                  <button className="close-button" onClick={() => togglePopup(index)}>Close</button>
+                </div>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-      <div className="card" onClick={togglePopup}>
-        <img src="image2.jpg" alt="Card 2" />
-        <div className="card-content">
-          <h3>Card 2</h3>
-          <p>Description for Card 2</p>
-        </div>
-        {showPopup && (
-          <div className="popup">
-            <p>This is the popup content.</p>
-            <button className="close-button" onClick={togglePopup}>Close</button>
-          </div>
-        )}
-      </div>
-      {/* Repeat for remaining cards */}
-    </Slider>
-  </div>
-);
+        ))}
+      </Slider>
+    </div>
+  );
 };
 
 export default PortraitSlider;
