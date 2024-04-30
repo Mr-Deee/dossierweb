@@ -36,12 +36,7 @@ function App() {
   }
   return (
     <div>
-      <nav  className="navbar">
-        <ul className="navbar-nav" >
-          <li><button onClick={() => scrollToSection('about')}>About</button></li>
-          <li><button onClick={() => scrollToSection('contact')}>Contact Us</button></li>
-        </ul>
-      </nav>
+
            <HomePage />  
 
       <ContinuousPage />
