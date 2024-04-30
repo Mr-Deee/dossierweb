@@ -207,7 +207,13 @@ button:hover {
 
 }
 
+.inner-container-left{
+  /* Adjust the spacing between the containers */
+  color: rgb(245, 245, 245); /* Text color for the left container */
+  font-size: 1.5rem; 
+  margin-right: 310px; 
 
+}
 .container-right {
   margin-right: 10px; /* Adjust the spacing between the containers */
   color: rgb(62, 66, 62); /* Text color for the left container */
@@ -226,4 +232,12 @@ button:hover {
 .slider-image {
   width: 100%; /* Ensure images fill the container */
   height: auto; /* Maintain aspect ratio */
+}
+.row-container{
+  display: flex;
+  justify-content: space-between;
+ /* Background color for the wrapper */
+  padding: 20px;
+  height: 556px;
+
 }

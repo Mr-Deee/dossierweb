@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './pages.css';
-
+import image1 from '../assets/images/n1.png';
+import image2 from '../assets/images/n1.png';
 const HomePage = () => {
 
 
@@ -8,8 +9,8 @@ const HomePage = () => {
 
   // Array of image sources
   const images = [
-    'image1.jpg',
-    'image2.jpg',
+    image1,
+    image2,
     'image3.jpg'
   ];
 
@@ -32,12 +33,21 @@ const HomePage = () => {
 
     </div>
     <div className="container container-right">
-    <div className="image-slider" style={{ transform: `translateX(${-currentIndex * 100}%)` }}>
-        {images.map((image, index) => (
-          <img key={index} src={image} alt={`Image ${index + 1}`} className="slider-image" />
-        ))}
-        </div>
+    <div className="inner-container-left">
+      <p>DEETS</p>
+      </div>
+   
+      <div className="row-container">
+      <p>Vehicles</p>
+
+      <p>|</p>
+      <p>Assets</p>
       
+      <p>|</p>
+      <p>Investements</p>
+       
+      </div>
+       
        </div>
   </div>
   
