@@ -27,7 +27,15 @@
 .App-link {
   color: #61dafb;
 }
-
+.footer {
+  background-color: #333; /* Background color for the footer */
+  color: white; /* Text color */
+  padding: 20px; /* Padding around the content */
+  text-align: center; /* Center align the content */
+  position: fixed; /* Fix the footer to the bottom of the viewport */
+  width: 100%; /* Take full width of the viewport */
+  bottom: 0; /* Stick to the bottom */
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
