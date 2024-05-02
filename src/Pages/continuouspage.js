@@ -8,30 +8,23 @@ const ContinuousPage = () => {
       <div id="about" className="section">
         <h2>About</h2>
         <p>
-          Company Background: Brief history of the company, its founders, and
-          the inspiration behind creating your dossier.
+
         </p>
         {/* Add three containers beneath container-right */}
 
         <div className="container-bottom">
           <div className="bottom-container">
             {" "}
-            Mission Statement: "At LegacyKeeper, our mission is to provide
+            <h1>Mission Statement</h1>
+            At Dossier our mission is to provide
             individuals with a secure and efficient way to declare their assets
             and ensure that their legacy is preserved for future generations."
           </div>
 
-          <div className="bottom-container">
-            {" "}
-            Security Measures: Explanation of the platform's security protocols
-            to reassure users about the safety of their sensitive information.
-          </div>
+   
         </div>
 
-        <div className="bottom-container">
-          Team Members: Profiles and photos of key team members, showcasing
-          their expertise and dedication to the mission.
-        </div>
+        
       </div>
       <div id="contact" className="section">
         <h2>Contact Us</h2>
