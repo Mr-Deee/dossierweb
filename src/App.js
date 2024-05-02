@@ -1,5 +1,5 @@
 import logo from "./logo.svg";
-import React, { useEffect } from "react";
+import React, { useEffect, useState} from "react";
 import "./App.css";
 import HomePage from "../src/Pages/home";
 import ContinuousPage from "../src/Pages/continuouspage";
@@ -34,8 +34,29 @@ function App() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+
+
+  const [currentPage, setCurrentPage] = useState('Home');
+
+  const handleNavigation = (page) => {
+    setCurrentPage(page);
+    scrollToSection(page.toLowerCase());
+  };
   return (
     <div>
+          <div>
+      <nav className="navbar">
+        <div className="nav-logo">Your Logo</div>
+        <ul className="nav-links">
+          <li className={currentPage === 'Home' ? 'active' : ''} onClick={() => handleNavigation('Home')}>Home</li>
+          <li className={currentPage === 'About' ? 'active' : ''} onClick={() => handleNavigation('About')}>About</li>
+          <li className={currentPage === 'Contact' ? 'active' : ''} onClick={() => handleNavigation('Contact')}>Contact Us</li>
+        </ul>
+      </nav>
+
+     
+</div>
       <HomePage />
 
       <ContinuousPage />
