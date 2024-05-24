@@ -10,7 +10,7 @@
     margin-bottom: 20px;
   }
   .section {
-    padding: 50px;
+    padding: 20px;
     background-color: #f2f2f2;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
@@ -121,7 +121,7 @@ button:hover {
 }
 
 .card img {
-  width: 100%;
+  width: 80%;
   height: auto;
   border-radius: 8px;
 }
@@ -285,8 +285,8 @@ display: flex;
   background-color: #2c2a2a; /* Background color for the left container */
   box-shadow: 0 0 10px rgba(122, 107, 107, 0.1); /* Add shadow to the container */
   border-radius: 2%; /* Add border radius */
-  height: 250px;
-  width: 600px;
+  height: 350px;
+  width: 640px;
   overflow: hidden; /* Hide overflowing content */
 }
 
