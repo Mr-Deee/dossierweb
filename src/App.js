@@ -47,7 +47,7 @@ function App() {
     <div>
           <div>
       <nav className="navbar">
-        <div className="nav-logo">Your Logo</div>
+        <div className="nav-logo">Dossier</div>
         <ul className="nav-links">
           <li className={currentPage === 'Home' ? 'active' : ''} onClick={() => handleNavigation('Home')}>Home</li>
           <li className={currentPage === 'About' ? 'active' : ''} onClick={() => handleNavigation('About')}>About</li>

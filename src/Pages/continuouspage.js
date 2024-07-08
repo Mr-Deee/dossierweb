@@ -28,31 +28,29 @@ const ContinuousPage = () => {
       </div>
       <div id="contact" className="section">
         <h2>Contact Us</h2>
-        <div className="container">
-      <h1>Contact Us</h1>
-      <div className="contact-info">
-        <p>For inquiries or assistance, please feel free to contact us:</p>
-        <p>Phone: +1234567890</p>
-        <p>Email: info@example.com</p>
-      </div>
+       
+     
       <ContactForm />
-    </div>
+
       </div>
     </div>
   );
 };
 function ContactForm() {
   return (
+    <div className="container">
     <div className="contact-form">
       <h2>Leave us a message</h2>
       <form>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
         </div>
         <div className="form-group">
           <label htmlFor="message">Message:</label>
@@ -63,6 +61,7 @@ function ContactForm() {
         </div>
       </form>
     </div>
-  );
-}
+  </div>
+  
+  )}
 export default ContinuousPage;

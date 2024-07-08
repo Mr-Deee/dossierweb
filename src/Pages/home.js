@@ -54,34 +54,13 @@ const HomePage = () => {
               />
             ))}
           </div>
-          <div className="inner-container-left">
-            <p>Details</p>
-          </div>
-
-          <div className="row-container">
-            <p>Vehicles</p>
-
-            <p>|</p>
-            <p>Assets</p>
-
-            <p>|</p>
-            <p>Investements</p>
-          </div>
+         
         </div>
       </div>
       {/* Add three containers beneath container-right */}
 
       <div className="container-bottom">
-        <div className="bottom-container">
-          {" "}
-          Declare Your Assets: Easily declare all your assets, including
-          properties, investments, valuables, and sentimental items, with our
-          user-friendly interface."
-          <div>
-            <img src="asset_icon.png" alt="Asset Icon" />
-            <button>Start Declaring</button>
-          </div>
-        </div>
+     
         <div className="bottom-container">
           Automatic Notifications: Description: "Ensure your loved ones are
           informed about your assets and wishes promptly after your passing. Our
