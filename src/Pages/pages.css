@@ -1,42 +1,45 @@
 .container {
-    text-align: center;
-    margin-top: 50px;
+  text-align: center;
+  margin-top: 50px;
+}
 
-  }
-  
-  .title {
-    color: #252323;
-    font-size: 3.5em;
-    margin-bottom: 20px;
-  }
-  .section {
-    margin-top: 123px;
-    height: 500px;
-    padding: 20px;
-    background-color: #f2f2f2;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
+.title {
+  color: #252323;
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
 
-  .section.visible {
-    opacity: 1;
-  }
-  .section h2 {
-    margin-top: 0;
-  }
-  
-  .section p {
-    margin-bottom: 0;
-  }  
-  /* App.css */
+.section {
+  margin-top: 123px;
+  height: 500px;
+  padding: 20px;
+  background-color: #f2f2f2;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.section.visible {
+  opacity: 1;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+
+.section p {
+  margin-bottom: 0;
+}
+
 .navbar {
-  background-color: #333; /* Background color for the navbar */
-  padding: 10px 20px; /* Add padding to the navbar */
+  background-color: #333;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbar-nav {
-  list-style-type: none; /* Remove default list styles */
+  list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -44,93 +47,72 @@
 }
 
 .nav-item {
-  margin-right: 10px; /* Adjust spacing between navbar items */
+  margin-right: 10px;
 }
 
 .logo {
-  font-size: 1.5rem; /* Adjust logo font size */
-  color: #fff; /* Text color for the logo */
-  font-weight: bold; /* Make the logo text bold */
+  font-size: 1.5rem;
+  color: #fff;
+  font-weight: bold;
 }
 
 .nav-right {
-  margin-left:470px; /* Move items to the right */
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 button {
-  background-color: transparent; /* Make button background transparent */
-  border: none; /* Remove button border */
-  color: #fff; /* Text color for buttons */
-  font-size: 1rem; /* Adjust button font size */
-  cursor: pointer; /* Show pointer cursor on hover */
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 button:hover {
-  text-decoration: underline; /* Underline button text on hover */
+  text-decoration: underline;
 }
-
-  
-/* PortraitSlider.css */
 
 .portrait-slider {
   width: 100%;
   overflow: hidden;
-  position: relative; /* Make the parent of cards relative for z-index */
+  position: relative;
 }
 
 .card {
-  width: 360px; /* Set width of each card */
-  height: 260px; /* Let height adjust based on content */
-  margin: 0 10px; /* Add margin between cards */
+  width: 360px;
+  height: 260px;
+  margin: 0 10px;
   display: inline-block;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-  position: relative; /* Ensure proper stacking order */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  cursor: pointer;
 }
 
 .card img {
-  width: 100%; /* Ensure the image fills the card */
+  width: 100%;
   height: auto;
-  border-top-left-radius: 10px; /* Add rounded corners to top left and top right */
+  border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .card-content {
-  padding: 40px;
+  padding: 20px;
   background-color: #f9f9f9;
+  text-align: center;
 }
 
 .card-content h3 {
   margin-top: 0;
-  color: #333; /* Change color of heading */
+  color: #333;
 }
 
 .card-content p {
   margin-bottom: 0;
-  color: #555; /* Change color of paragraph */
-}
-
-
-.portrait-slider {
-  position: relative;
-}
-
-.card {
-  position: relative;
-  cursor: pointer;
-  margin: 0 10px;
-}
-
-.card img {
-  width: 80%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.card-content {
-  text-align: center;
-  height: 399;
+  color: #555;
 }
 
 .popup-overlay {
@@ -139,9 +121,9 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  backdrop-filter: blur(8px); /* Add blur effect */
-  z-index: 1000; /* Ensure it's above everything else */
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -151,8 +133,6 @@ button:hover {
   background-color: white;
   padding: 20px;
   border-radius: 23px;
-  height: 233px;
-  width: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -169,138 +149,121 @@ button:hover {
   background-color: #bbb;
 }
 
-
 .container-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(248, 244, 244); /* Background color for the wrapper */
+  background-color: rgb(248, 244, 244);
   padding: 20px;
-  height: 596px;
+  height: 100%;
 }
 
 .container-bottom {
   padding: 10px;
-  
   display: flex;
   justify-content: space-between;
 }
 
-.card-container{
-display: flex;
+.card-container {
+  display: flex;
   justify-content: space-between;
-  background-color: rgb(248, 244, 244); /* Background color for the wrapper */
+  background-color: rgb(248, 244, 244);
   padding: 20px;
-  height: 596px;
+  height: auto;
 }
-
-/* Media query for mobile devices */
-@media only screen and (max-width: 600px) {
-  .container-right {
-    display: none; /* Hide the container-right on small screens */
-  }
-}
-
 
 .container-row {
-display: flex;
-  justify-content: space-between;
-  background-color: rgba(255, 250, 250, 0.075); /* Background color for the wrapper */
-  padding: 20px;
-  height: 396px;
-}
-
-.container-bottom {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px; /* Add some space between container-right and container-bottom */
+  background-color: rgba(255, 250, 250, 0.075);
+  padding: 20px;
+  height: auto;
 }
 
 .bottom-container {
-padding: 23px;
-  height: 129px;
+  padding: 23px;
   border-radius: 20px;
   background-color: #f0f0f0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 10px; /* Add some spacing between bottom containers */
+  margin: 0 10px;
 }
+
 .container-left {
-  width: 512px;
-  
-  margin-right: 10px; /* Adjust the spacing between the containers */
-  color: rgb(62, 66, 62); /* Text color for the left container */
-  font-size: 1.5rem; 
-
- 
+  flex: 1;
+  margin-right: 10px;
+  color: rgb(62, 66, 62);
+  font-size: 1.5rem;
 }
 
-
-
-
-.inner-container-left{
+.inner-container-left {
   margin-left: 15px;
-  /* Adjust the spacing between the containers */
-  color: rgb(134, 133, 133); /* Text color for the left container */
-  font-size: 1.5rem; 
-  
-}
-
-
-
-.navbar {
-  background-color: #0f0f0f;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-logo {
-  font-size: 24px;
-}
-
-.nav-links {
-  list-style-type: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.nav-links li:last-child {
-  margin-right: 0;
-}
-
-.nav-links li.active {
-  font-weight: bold;
-}
-
-.nav-links li:hover {
-  text-decoration: underline;
+  color: rgb(134, 133, 133);
+  font-size: 1.5rem;
 }
 
 .container-right {
   margin-top: 60px;
-  margin-right: 30px; /* Adjust the spacing between the containers */
-  color: rgb(62, 66, 62); /* Text color for the left container */
-  background-color: #2c2a2a; /* Background color for the left container */
-  box-shadow: 0 0 10px rgba(122, 107, 107, 0.1); /* Add shadow to the container */
-  border-radius: 2%; /* Add border radius */
+  margin-right: 30px;
+  color: rgb(62, 66, 62);
+  background-color: #2c2a2a;
+  box-shadow: 0 0 10px rgba(122, 107, 107, 0.1);
+  border-radius: 2%;
   height: 350px;
   width: 640px;
-  overflow: hidden; /* Hide overflowing content */
+  overflow: hidden;
 }
 
-
-.row-container{
+.row-container {
   display: flex;
   justify-content: space-between;
- /* Background color for the wrapper */
   padding: 20px;
   height: 556px;
-
 }
 
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .title {
+    font-size: 2em;
+  }
+
+  .section {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .nav-right {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .card-container, .container-row, .row-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .container-right {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .bottom-container {
+    margin: 10px 0;
+  }
+}
