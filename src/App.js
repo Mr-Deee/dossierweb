@@ -28,6 +28,9 @@ function App() {
     };
   }, []);
 
+
+  
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -35,20 +38,25 @@ function App() {
     }
   };
 
-
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   const [currentPage, setCurrentPage] = useState('Home');
 
   const handleNavigation = (page) => {
     setCurrentPage(page);
     scrollToSection(page.toLowerCase());
+    setDrawerOpen(false);
   };
   return (
     <div>
-          <div>
+      
       <nav className="navbar">
+
+      <div className="menu-icon" onClick={() => setDrawerOpen(!drawerOpen)}>
+        &#9776;
+      </div>
         <div className="nav-logo">Dossier</div>
-        <ul className="nav-links">
+        <ul className="nav-links  ${drawerOpen ? 'open' : ''}">
           <li className={currentPage === 'Home' ? 'active' : ''} onClick={() => handleNavigation('Home')}>Home</li>
           <li className={currentPage === 'About' ? 'active' : ''} onClick={() => handleNavigation('About')}>About</li>
           <li className={currentPage === 'Contact' ? 'active' : ''} onClick={() => handleNavigation('Contact')}>Contact Us</li>
@@ -56,7 +64,7 @@ function App() {
       </nav>
 
      
-</div>
+
       <HomePage />
 
       <ContinuousPage />
