@@ -13,7 +13,20 @@
   display: flex;
   gap: 20px;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #fff;
+}
 
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color:bisque
+}
 .nav-links li {
   cursor: pointer;
   padding: 10px 15px;
@@ -54,6 +67,7 @@
   display: none;
   font-size: 30px;
   cursor: pointer;
+  color: #282c34;
 }
 
 @media (max-width: 768px) {

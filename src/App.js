@@ -46,6 +46,8 @@ function App() {
     setCurrentPage(page);
     scrollToSection(page.toLowerCase());
     setDrawerOpen(false);
+    setCurrentPage(page);
+
   };
   return (
     <div>
